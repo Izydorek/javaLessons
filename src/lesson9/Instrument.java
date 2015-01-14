@@ -28,7 +28,7 @@ public class Instrument {
 	}
 	
 	public static void playnote(String[] args){
-		Instrument playn
+
 	}
 	
 	
