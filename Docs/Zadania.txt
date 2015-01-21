@@ -12,4 +12,8 @@ Konfiguracja gita:
 
 Wymysl program, gre -> który chcesz napisac.
 
-coding bat
+coding bat]
+
+
+
+aktualizajcja!!

@@ -15,7 +15,15 @@ public class Player {
 		this.instrument = instrument;
 	}
 
-
+	public static void playsong(String args[]) {
+		Instrument instrument = new Instrument(Category.STRINGS, "Violin");
+		
+		String[] sound = {"C", "D", "E", "F", "G", "A", "H"};
+		String[] hz = {"1", "3", "4", "1", "6", "3"}
+		
+		
+		
+	}
 	public String toString() {
 		return "Player [firstaName=" + firstaName + ", lastName=" + lastName
 				+ ", instrument=" + instrument + "]";
@@ -32,4 +40,5 @@ public class Player {
 
 }
 
-//* Instrument ma miec metode playnote  - ma pobieraæ 2 parametry (obydwa String) 1. wysokosc dziweku / player ma miec metode playsong. ta metoda ma dostac tablice stringów, za pomoca instrumentu playera ma w pentli zagracc ca³y utwór ze stringa
+//* Instrument ma miec metode playnote  - ma pobieraæ 2 parametry (obydwa String) 1. wysokosc dziweku / player ma miec metode playsong. ta metoda ma dostac tablice stringów,
+// za pomoca instrumentu playera ma w pentli zagracc ca³y utwór ze stringa
