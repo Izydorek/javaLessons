@@ -4,9 +4,9 @@ import lesson9.Instrument.Category;
 
 public class Player {
 
-	private String firstaName;
-	private String lastName;
-	private Instrument instrument;
+	public String firstaName;
+	public String lastName;
+	public Instrument instrument;
 	
 	
 	public Player(String firstaName, String lastName, Instrument instrument) {
@@ -15,30 +15,27 @@ public class Player {
 		this.instrument = instrument;
 	}
 
-	public static void playsong(String args[]) {
-		Instrument instrument = new Instrument(Category.STRINGS, "Violin");
+	public void playsong(String songName) {
 		
+		System.out.println(songName);
 		String[] sound = {"C", "D", "E", "F", "G", "A", "H"};
-		String[] hz = {"1", "3", "4", "1", "6", "3"}
+		String[] hz = {"1", "3", "4", "1", "6", "3"};
 		
-		
-		
+		instrument.playnote(sound[1], hz[3]);
 	}
+	
 	public String toString() {
 		return "Player [firstaName=" + firstaName + ", lastName=" + lastName
 				+ ", instrument=" + instrument + "]";
  	}
 	
-	public static void main(String[] args) {
-		Instrument instrument = new Instrument(Category.BRASS, "Perkusion");
-		Player player = new Player("Jan", "Kowalski", instrument);
-		System.out.println(player);
+
 		
-	
-	}
-	
-
 }
+	
 
-//* Instrument ma miec metode playnote  - ma pobieraæ 2 parametry (obydwa String) 1. wysokosc dziweku / player ma miec metode playsong. ta metoda ma dostac tablice stringów,
+
+//* Instrument ma miec metode playnote  - ma pobieraæ 2 parametry (obydwa String)
+// 1. wysokosc dziweku / player ma miec metode playsong. ta metoda ma dostac
+// tablice stringów,
 // za pomoca instrumentu playera ma w pentli zagracc ca³y utwór ze stringa

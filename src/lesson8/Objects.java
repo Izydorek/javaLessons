@@ -72,6 +72,7 @@ class Man {
 		BMI = weigth / Math.sqrt(height);
 		name = "Adam";
 		age = 1111111111;
+		averageAge = (age + averageAge) / Population;
 		height = 180;
 		weigth = 80;
 		
@@ -81,7 +82,7 @@ class Man {
 	public Man(String name, int age, int height, int weigth){
 		Population++;
 		BMI = weigth / Math.sqrt(height);
-		// !!!!!!!!!!averageAge = (age + age) / Population;
+		averageAge = (age + averageAge) / Population;
 		this.name = name;
 		this.age = age;
 		this.height = height;
@@ -126,7 +127,7 @@ Srednia waga i œredni wzrost w spo³eczenstwie.
 BMI danego cz³owieka zmienna(metoda getBmi, typ zwracany double).
 
 
-
+wypisz print static statistics
 
 Zamodeluj samochód na podobnym.
 

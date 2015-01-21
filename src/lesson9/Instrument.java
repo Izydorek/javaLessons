@@ -18,10 +18,14 @@ public class Instrument {
 		
 	}
 	
-	public void Playnote(String sound, String hz){
+	public void playnote(String sound, String hz){
 		this.sound = sound;
 		this.hz = hz;
+		
+		System.out.println(name + " is playing " + sound);
 	}
+	
+	
 
 	
 	public String toString() {
