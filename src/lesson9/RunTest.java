@@ -11,7 +11,7 @@ public class RunTest {
 		System.out.println(muzyk.firstaName);
 		muzyk = null;
 		muzyk = new Player("Wojtek", "Róg", instrument);
-		System.out.println(muzyk.firstaName);
+		System.out.println(muzyk.instrument + "," + muzyk.instrument);
 		muzyk.playsong("song");
 	}
 }

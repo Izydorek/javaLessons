@@ -17,3 +17,16 @@ coding bat]
 
 
 aktualizajcja!!
+
+
+
+
+
+1. NOTATKI
+2. Objects z kó³ko i krzy¿yk
+--------------------------
+3. modyfikatory
+4. dziedziczenie
+5. Listy
+6. Biblioteki -> wyj¹tki
+7. Obs³uga sieci w java
