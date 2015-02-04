@@ -20,9 +20,12 @@ aktualizajcja!!
 
 
 
+zwróc enuma oznaczajacego kto wygra³, jezeli nikt nie wygra³ zwraca null
+
+Debug programu lesson 11. + programy
 
 
-1. NOTATKI
+1. NOTATK
 2. Objects z kó³ko i krzy¿yk
 --------------------------
 3. modyfikatory
