@@ -29,10 +29,33 @@ public class Board {
 	public void fillCellByText(String text){
 		
 		Cell cell = charToCell(text.charAt(0));
-		int row = Character.digit(text.charAt(1), 10);
+		int row = Character.digit(text.charAt(1), 10);  /////////////////////////////////////////// radix?
 		int col = Character.digit(text.charAt(2), 10);
 		fillCell(cell, row, col);
+		
+		}
+	
+	public void whosFirst(Cell cell){
+		
+		
 	}
+	
+	
+	public boolean isTextReal(String fillCellByText){
+		if(fillCellByText.charAt(0) != 'X' || 
+				fillCellByText.charAt(0) != 'O' || 
+				Character.digit(fillCellByText.charAt(1), 10) < 0 ||
+				Character.digit(fillCellByText.charAt(1), 10) > 3 || //////////////////////////////////////////////++fix++////////////////////////////////
+				Character.digit(fillCellByText.charAt(2), 10) < 0 ||
+				Character.digit(fillCellByText.charAt(2), 10) > 3 ||
+				fillCellByText.length() > 3 || 
+				fillCellByText.length() == 0){
+		return false; 	
+		}else {
+			return true;
+		}
+		
+		}
 	
 	public static void main(String[] args) {
 		
@@ -57,22 +80,26 @@ public class Board {
 
 	
 	public void print() {
-		System.out.println("*****");
-		for(int i = 0; i < 3; i++){
-			System.out.print("*");
-			for(int j = 0; j < 3; j++){
-				char c = cellToChar(table[i][j]) ; 
-				System.out.print(c);
-			}
-			System.out.println("*");
-		}
-		System.out.println("*****");
-		
-		
-		
-		System.out.println("The winner is: " + checkWinner());
-		
-		System.out.println();
+		if (isTextReal() == false){
+			System.out.println("!**Error wit your type**!"); /////////////////////////////////////////////////////////
+			} else {
+				System.out.println("*****");
+				for(int i = 0; i < 3; i++){
+					System.out.print("*");
+					for(int j = 0; j < 3; j++){
+						char c = cellToChar(table[i][j]) ; 
+						System.out.print(c);
+					}
+					System.out.println("*");
+				}
+				System.out.println("*****");
+				
+				
+				
+				System.out.println("The winner is: " + checkWinner());
+				
+				System.out.println();			
+			}	
 		
 	}
 	public static char cellToChar(Cell cell){
@@ -154,7 +181,6 @@ public class Board {
 		} else {
 			return false;
 		}
-		
 		
 	}
 	

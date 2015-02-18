@@ -9,11 +9,6 @@ aktualizajcja!!
 
 
 
-zwróc enuma oznaczajacego kto wygra³, jezeli nikt nie wygra³ zwraca null
-
-Debug programu lesson 11. + programy
-
-
 ZADANIA:
 -zabezpieczenie przed wpisywaniem z³ego tekstu X88 fillCellbyText(), b³ad
 -b³ad przy dodawaniu drugi raz przy dodawaniu (nadpisywaniu) fillCell()

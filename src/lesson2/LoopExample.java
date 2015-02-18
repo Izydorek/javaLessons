@@ -9,12 +9,12 @@ public class LoopExample {
 		int i = 1;
 
 		while (i <= 100) {
-			// System.out.println("przebiegiem " + i + " metrów");
+			// System.out.println("przebieglem " + i + " metrów");
 			i++; // i = i + 1;
 		}
 
 		for (int j = 0; j < 100; j = j + 10) {
-			// System.out.println("Przebieglem " + j + " metrów");
+			//A System.out.println("Przebieglem " + j + " metrów");
 		}
 		for (int j = 1; j < 10; j++) {
 			if (j == 5) {
