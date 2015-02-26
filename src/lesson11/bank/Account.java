@@ -4,8 +4,6 @@ public class Account {
 
 	private int amount;
 
-	
-	
 	public Account(int amount) {
 		this.amount = amount;
 	}
