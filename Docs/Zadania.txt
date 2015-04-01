@@ -3,6 +3,18 @@ Wymysl program, gre -> który chcesz napisac.
 
 coding bat]
 
+ZADANIA 
+Czy po wpisaniu komendy czy jest zwyciezcam, nastepnie przejsc z powrotem do stanu setting
+
+
+
+
+
+
+
+
+
+
 
 
 aktualizajcja!!

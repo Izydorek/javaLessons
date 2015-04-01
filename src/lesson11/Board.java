@@ -3,11 +3,15 @@ package lesson11;
 public class Board {
 
 	private Cell[][] table = new Cell[3][];
-
-	public Board() {
-		table[0] = new Cell[3];
-		table[1] = new Cell[3];
-		table[2] = new Cell[3];
+	private Cell nextMove;
+	
+	public Board(Cell whoIsFirst) {
+		this.table[0] = new Cell[3];
+		this.table[1] = new Cell[3];
+		this.table[2] = new Cell[3];
+		
+		this.nextMove = whoIsFirst;
+		
 		// table[0][0] = Cell.CROSS;
 		// table[0][1] = Cell.CIRCLE;
 		// table[0][2] = Cell.CIRCLE;
@@ -18,10 +22,22 @@ public class Board {
 		// table[2][1] = Cell.CROSS;
 		// table[2][2] = Cell.CROSS;
 	}
+	
+	
 
 	public void fillCell(Cell cell, int row, int col) {
+		if(cell != nextMove){
+			System.out.println("Teraz ruch " + nextMove );
+			return;
+		}
+		
 		if(table[row][col] == null){
 			table[row][col] = cell;
+			if(nextMove == Cell.CIRCLE){
+				nextMove = Cell.CROSS;
+			} else{
+				nextMove = Cell.CIRCLE;
+			}
 		} else {
 			System.out.println("cell " + row + "," + col + " is already filled");
 			
@@ -42,17 +58,13 @@ public class Board {
 		}
 	}
 
-	public void whosFirst(Cell cell) {
-
-	}
 
 	public static boolean isTextReal(String fillCellByText) {
 		if ((fillCellByText.charAt(0) != 'X'
 				&& fillCellByText.charAt(0) != 'O')
 				|| Character.digit(fillCellByText.charAt(1), 10) < 0
 				|| Character.digit(fillCellByText.charAt(1), 10) > 3
-				|| // ////////////////////////////////////////////++fix++////////////////////////////////
-				Character.digit(fillCellByText.charAt(2), 10) < 0
+				|| Character.digit(fillCellByText.charAt(2), 10) < 0
 				|| Character.digit(fillCellByText.charAt(2), 10) > 3
 				|| fillCellByText.length() > 3 || fillCellByText.length() == 0) {
 			return false;
@@ -66,9 +78,9 @@ public class Board {
 
 		isTextReal("X01");
 		
-		Board board = new Board();
+		Board board = new Board(Cell.CIRCLE);
 		Board board2 = board;
-		Board board3 = new Board();
+		Board board3 = new Board(Cell.CIRCLE);
 
 		board.print();
 		board2.print();
@@ -94,18 +106,18 @@ public class Board {
 		// System.out.println("!**Error wit your type**!");
 		// /////////////////////////////////////////////////////////
 		// } else {
-		System.out.println("*****");
+	//	System.out.println("*****");
 		for (int i = 0; i < 3; i++) {
-			System.out.print("*");
+			//System.out.print("*");
 			for (int j = 0; j < 3; j++) {
 				char c = cellToChar(this.table[i][j]);
 				System.out.print(c);
 			}
-			System.out.println("*");
+		System.out.println();
 		}
-		System.out.println("*****");
+//		System.out.println("*****");
 
-		System.out.println("The winner is: " + checkWinner());
+//		System.out.println("The winner is: " + checkWinner());
 
 		System.out.println();
 		// }
